@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Rethink Sans', sans-serif;
+    box-sizing: border-box;
+}
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(62deg,#8EC5FC, #E0C3FC );
+    padding: 10px;
+    display:flex;
+    align-items: center;
+}
+.todo-app {
+    background-color: white;
+    border-radius: 20px;
+    margin: auto;
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+}
+.todo-app h2{
+    display: flex;
+    align-items: center;   
+}
+.todo-app h2 img {
+    width: 30px;
+    margin-left: 10px;
+}
+.todo-app input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 5px;
+    border-radius: 20px;
+    padding-left: 20px;
+}
+.todo-app button{
+    border: none;
+    background: linear-gradient(62deg,#8EC5FC, #E0C3FC );
+    padding: 10px;
+    border-radius: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    cursor: pointer;
+    color: white;
+}
+.todo-app button:hover {
+    opacity: 80%;
+    transition-delay: 2ms;
+}
+.todo-app button:active {
+    background-color: black;
+    transition-delay: 2ms;
+}
+.input-field {
+    display: flex;
+    justify-content:space-between;
+    background-color:aliceblue;
+    margin-top: 30px;
+    border-radius: 30px;
+    align-items: center;
+
+}
+ul {
+    margin-top: 20px;
+}
+ul li{
+    list-style: none;
+    cursor: pointer;
+    font-size: medium;
+    padding: 10px 30px 0px 30px;
+    position: relative;
+}
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    background-image: url(images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 10px;
+    left: 0px;
+    
+}
+
+.active {
+    text-decoration: line-through;
+    color: gray;
+}
+.active::before {
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    background-image: url(images/checked.png);
+    background-size: cover;
+    background-position: center;
+    top: 10px;
+    left: 0px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+ul li span{
+    position: absolute;
+    right: 0;
+    border-radius: 3px;
+    padding: 5px;
+    transition-duration: 0.5s;
+}
+ul li span:hover {
+    background-color:lightgray;
+        
+}
